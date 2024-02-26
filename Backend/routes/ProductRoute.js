@@ -7,13 +7,14 @@ import {
   updateProduct,
   deleteProduct,
 } from "../controllers/Product.js";
+import { verifyUser } from "../middleware/AuthUser.js";
 
 const router = express.Router();
 
-router.get("/product", getProduct);
-router.get("/product/:id", getProductId);
-router.post("/create-product", createProduct);
-router.patch("/update-product/:id", updateProduct);
-router.delete("/delete-product/:id", deleteProduct);
+router.get("/product", verifyUser, getProduct);
+router.get("/product/:id", verifyUser, getProductId);
+router.post("/create-product", verifyUser, createProduct);
+router.patch("/update-product/:id", verifyUser, updateProduct);
+router.delete("/delete-product/:id", verifyUser, deleteProduct);
 
 export default router;
