@@ -1,0 +1,35 @@
+//create user
+POST http://localhost:5000/create-user
+Content-Type: application/json
+
+{
+  "name":"Huda Adelson",
+  "email":"huda@local.com",
+  "password":"huda@2024",
+  "confPassword":"huda@2024",
+  "role":"user"
+}
+###
+//update user
+PATCH http://localhost:5000/update-user/dd75ee5e-3df1-45fb-bb9c-af4ba97e939c
+Content-Type: application/json
+
+{
+  "name":"Aprizal Abyan Updated",
+  "email":"aby@local.com",
+  "password":"aby@2024",
+  "confPassword":"aby@2024",
+  "role":"user"
+}
+
+###
+//get user
+GET http://localhost:5000/users
+
+###
+//get user by id
+GET http://localhost:5000/users/d7bddc92-23a2-4512-b8d1-487f7bf7c09e
+
+###
+//delete user
+DELETE  http://localhost:5000/delete-user/d7bddc92-23a2-4512-b8d1-487f7bf7c09e
