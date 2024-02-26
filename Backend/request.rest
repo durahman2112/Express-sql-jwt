@@ -33,3 +33,70 @@ GET http://localhost:5000/users/d7bddc92-23a2-4512-b8d1-487f7bf7c09e
 ###
 //delete user
 DELETE  http://localhost:5000/delete-user/d7bddc92-23a2-4512-b8d1-487f7bf7c09e
+
+###
+//login admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "email":"admin@local.com",
+  "password":"admin@2024"
+}
+
+###
+//login user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "email":"huda@local.com",
+  "password":"huda@2024"
+}
+
+###
+//loginme
+GET http://localhost:5000/me
+Content-Type: application/json
+
+{
+  "email":"admin@local.com",
+  "password":"admin@2024"
+}
+
+
+###
+//logout
+DELETE  http://localhost:5000/logout
+
+###
+//get allproduct
+GET http://localhost:5000/product
+
+###
+//get productbyid
+GET http://localhost:5000/product/b8fe195a-b5e7-49a4-a691-38012cd611de
+
+###
+//post data product
+POST http://localhost:5000/create-product
+Content-Type: application/json
+
+{
+  "name":"Coklat 3",
+  "price":15000 
+}
+
+###
+//update data product
+PATCH  http://localhost:5000/update-product/b8fe195a-b5e7-49a4-a691-38012cd611de
+Content-Type: application/json
+
+{
+  "name":"Product Updated oleh admin",
+  "price":15000 
+}
+
+###
+//delete data product
+DELETE http://localhost:5000/delete-product/de9c2596-b5d4-489e-a680-47d62f2e55c4
