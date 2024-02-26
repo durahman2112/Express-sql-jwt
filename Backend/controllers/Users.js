@@ -1,8 +1,6 @@
 import User from "../models/UsersModel.js";
 import argon2 from "argon2";
 
-// Menambahakn comment
-
 export const getUser = async (req, res) => {
   try {
     const response = await User.findAll({
